@@ -1,0 +1,16 @@
+.button-cadastrar{
+	float: right;
+}
+.feras-bg-main-color{
+	background-color: cadetblue !important;
+}
+.feras-bg-side-color{
+	background-color: darkslategrey !important;
+}
+.feras-text-color{
+	color: white;
+}
+.feras-modal-header-bg-color{
+	background-color: #eee;
+}
+
