@@ -15,8 +15,11 @@
       <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
       <!-- Custom styles for this template-->
       <link href="css/sb-admin.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="css/feras-style.css">
+
+      <link rel="stylesheet" href="css/feras-style.css">
+
       <script type="text/javascript" src="js/ajax.js"></script>
+
    </head>
    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
       <!-- Navigation-->
@@ -56,7 +59,7 @@
                </li>
                <li class="nav-item">
                   <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                  <i class="fa fa-fw fa-sign-out"></i>Sair</a>
+                  <i class="fa fa-fw fa-sign-out"></i>Entrar</a>
                </li>
             </ul>
          </div>
@@ -75,14 +78,6 @@
       <div class="card-header">
          <i class="fa fa-database"></i>  
          Mercadorias
-         <div class="button-cadastrar">
-            <a class="nav-link" data-toggle="modal" data-target="#modalCadastrar">
-            <button type="button" class="btn btn-primary">
-            <i class="fa fa-fw fa-plus"></i>
-            Cadastrar Produto
-            </button>
-            </a>
-         </div>
       </div>
       <div class="card-body">
       <div class="table-responsive">
@@ -94,7 +89,6 @@
             <th>Quantidade</th>
             <th>Valor à Vista</th>
             <th>Valor à Prazo</th>
-            <th>Opções</th>
          </tr>
       </thead>
       <tbody id="tabela-feras-body">

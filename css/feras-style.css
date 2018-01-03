@@ -13,4 +13,8 @@
 .feras-modal-header-bg-color{
 	background-color: #eee;
 }
+.feras-alert-login{
+	width: 100%;
+	display: none;
+}
 

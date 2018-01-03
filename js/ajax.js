@@ -29,6 +29,7 @@ function listaproduto(){
 	xhttp.onreadystatechange = function(){
 		if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("tabela-feras-body").innerHTML = this.responseText;
+                document.getElementById("feras-atualizacao-data").innerHTML = "Atualizado em " + new Date().toLocaleString();
             }
 	};
 	xhttp.open("GET","listar.php",true);
@@ -43,8 +44,9 @@ function cadastrarelistar(){
 
 function changehideninputid(id){
 	document.getElementById("feras-input-deletar").value = id;
-	console.log(id);
 };
+
+
 
 function deletarprodutobanco(){
 	var xhttp = new XMLHttpRequest();
@@ -77,3 +79,29 @@ function editarProduto(){
 	updateProduto();
 	listaproduto();
 };
+
+function validateLogin(){
+
+	var usuario = document.getElementById("feras-validate-login-usuario").value;
+	var senha = document.getElementById("feras-validate-login-senha").value;
+;
+
+	var xhttp = new XMLHttpRequest();
+
+	
+
+	xhttp.onreadystatechange = function(){
+		if (this.readyState == 4 && this.status == 200) {
+                if(!this.responseText){
+                	document.getElementById("feras-alert-login-id").style.display="block";
+                }
+                else{
+                	document.getElementById("feras-form-login").submit();
+                }
+            }
+	};
+	xhttp.open("POST","validateLogin.php",true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("usuario="+usuario+"&senha="+senha);
+};
+
