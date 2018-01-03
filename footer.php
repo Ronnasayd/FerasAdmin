@@ -69,11 +69,11 @@
                   </div>
                   <div class="form-group col-md-5">
                      <label for="inputPassword4">Valor à Vista</label>
-                     <input type="text" name="vista" class="form-control" id="feras-cadastro-vista" placeholder="$ 00.00">
+                     <input type="number" step="0.001" name="vista" class="form-control" id="feras-cadastro-vista" placeholder="$ 00,00">
                   </div>
                   <div class="form-group col-md-5">
                      <label for="inputPassword4">Valor à Prazo</label>
-                     <input type="text" name="prazo" class="form-control" id="feras-cadastro-prazo" placeholder="$ 00.00">
+                     <input type="number" step="0.001" name="prazo" class="form-control" id="feras-cadastro-prazo" placeholder="$ 00,00">
                   </div>
                </div>
                <!-- </form> -->
@@ -116,11 +116,11 @@
                   </div>
                   <div class="form-group col-md-5">
                      <label for="inputPassword4">Valor à Vista</label>
-                     <input type="text" class="form-control" id="feras-editar-vista" placeholder="$ 00.00">
+                     <input type="number" step="0.001" class="form-control" id="feras-editar-vista" placeholder="$ 00,00">
                   </div>
                   <div class="form-group col-md-5">
                      <label for="inputPassword4">Valor à Prazo</label>
-                     <input type="text" class="form-control" id="feras-editar-prazo" placeholder="$ 00.00">
+                     <input type="number" step="0.001" class="form-control" id="feras-editar-prazo" placeholder="$ 00,00">
                   </div>
                </div>
          </div>
