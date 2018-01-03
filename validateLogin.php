@@ -1,29 +1,30 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","Feras");
-if(!$conn){
-	exit;
-}
+include('conecta.php');
+include('executa.php');
 
-$sql = "SELECT id FROM usuarios WHERE usuario='{$_POST['usuario']}' AND senha='{$_POST['senha']}'";
+$senha = mysqli_real_escape_string($conn,md5($_POST['senha']));
+$usuario = mysqli_real_escape_string($conn,$_POST['usuario']);
 
-$result = mysqli_query($conn,$sql);
+$sql = "SELECT id FROM usuarios WHERE usuario='$usuario' AND senha='$senha'";
 
-if(!$result){
-	echo mysqli_error($conn);
-	exit;
-}
+$result = executaQuery($conn,$sql);
+
 
 $row = mysqli_fetch_row($result);
 
+
 if($row[0]){
+
+			session_start();
+			$_SESSION['admin']="administrador_logado";
+		
 
 			header('Location: mercadorias.php');
 			exit;
 }
 else{
 			echo mysqli_error($conn);
-			exit;
+			
 }
 mysqli_close($conn);
-?>

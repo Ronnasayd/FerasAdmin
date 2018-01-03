@@ -42,12 +42,12 @@
             <label for="exampleInputPassword1">Senha</label>
             <input class="form-control" id="feras-validate-login-senha" type="Password" placeholder="senha" name="senha">
           </div>
-          <div class="form-group">
+         <!--  <div class="form-group">
             <div class="form-check">
               <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Lembrar Senha</label>
+                <input class="form-check-input" type="checkbox" name="lembrar"> Lembrar Senha</label>
             </div>
-          </div>
+          </div> -->
           <button class="btn btn-primary btn-block" id="feras-button-validate-id" type="button" onclick="validateLogin()">Entrar</button>
         </form>
          </div>

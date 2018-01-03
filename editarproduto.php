@@ -1,12 +1,17 @@
 <?php
-$conn = mysqli_connect("localhost","root","","Feras");
-	$query = "UPDATE mercadorias SET produto='{$_GET['produto']}',descricao='{$_GET['descricao']}',quantidade={$_GET['quantidade']},vista={$_GET['vista']},prazo={$_GET['prazo']} WHERE id={$_GET['id']}";
-	$result = mysqli_query($conn,$query);
+include('conecta.php');
+include('executa.php');
 
-	if(!$result){
-		echo mysqli_error($conn);
-}
+	$produto = mysqli_real_escape_string($conn,$_GET['produto']);
+	$descricao = mysqli_real_escape_string($conn,$_GET['descricao']);
+	$quantidade = mysqli_real_escape_string($conn,$_GET['quantidade']);
+	$vista = mysqli_real_escape_string($conn,$_GET['vista']);
+	$prazo = mysqli_real_escape_string($conn,$_GET['prazo']);
+	$id = mysqli_real_escape_string($conn,$_GET['id']);
+
+	$query = "UPDATE mercadorias SET produto='{$produto}',descricao='{$descricao}',quantidade={$quantidade},vista={$vista},prazo={$prazo} WHERE id={$id}";
+	
+	$result = executaQuery($conn,$query);
 
 	mysqli_close($conn);
 
-?>

@@ -1,7 +1,9 @@
 <?php
-	$conn = mysqli_connect("localhost","root","","Feras");
+	include('conecta.php');
+	include('executa.php');
+
 	$query = "SELECT * FROM mercadorias";
-	$result = mysqli_query($conn,$query);
+	$result = executaQuery($conn,$query);
 
 	while($row = mysqli_fetch_assoc($result)){
 				echo "<tr>
