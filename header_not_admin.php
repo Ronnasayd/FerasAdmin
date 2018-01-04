@@ -18,22 +18,21 @@
 
       <link rel="stylesheet" href="css/feras-style.css">
 
-      <script type="text/javascript" src="js/ajax.js"></script>
 
    </head>
    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
       <!-- Navigation-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top feras-bg-main-color" id="mainNav">
-         <a class="navbar-brand" href="#">Feras PetShop</a>
+         <a class="navbar-brand" href="#feras-area-de-trabalho">Feras PetShop</a>
          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="feras-bg-side-color navbar-nav navbar-sidenav" id="exampleAccordion">
-               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                  <a class="nav-link" href="#">
+               <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Área de Trabalho">
+                  <a class="nav-link" href="#feras-area-de-trabalho">
                   <i class="fa fa-fw fa-home"></i>
-                  <span class="feras-text-color nav-link-text">Área de Trabalho</span>
+                  <span class="feras-text-color nav-link-text" id="feras-area-de-trabalho">Área de Trabalho</span>
                   </a>
                </li>
             </ul>
@@ -69,7 +68,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
          <li class="breadcrumb-item">
-            <a href="#">Área de Trabalho</a>
+            <a href="#feras-area-de-trabalho">Área de Trabalho</a>
          </li>
          <li class="breadcrumb-item active">Mercadorias</li>
       </ol>

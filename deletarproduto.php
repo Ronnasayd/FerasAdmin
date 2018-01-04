@@ -1,4 +1,7 @@
 <?php
+session_start();
+if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
+	
 	include('conecta.php');
 	include('executa.php');
 	
@@ -8,3 +11,8 @@
 	$result = executaQuery($conn,$query);
 
 	mysqli_close($conn);
+}
+else{
+	header('Location: index.php');
+	exit;
+}

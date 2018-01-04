@@ -76,6 +76,8 @@
 <!-- Custom scripts for this page-->
 <script src="js/sb-admin-datatables.min.js"></script>
 
+<script type="text/javascript" src="js/ajax.js"></script>
+
 </div>
 </body>
 </html>
