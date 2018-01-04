@@ -6,7 +6,7 @@ if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
 	include('footer.php');
 }
 else{
-	include('header.php');
+	include('header_not_admin.php');
 ?>
 <div class="alert alert-danger">
   <strong>Perigo!</strong> Você não tem autorização para acessar essa área.
