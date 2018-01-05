@@ -1,4 +1,14 @@
 
+function passToEdit(produto,descricao,quantidade,vista,prazo,id){
+	document.getElementById('feras-editar-produto').value=produto;
+    document.getElementById('feras-editar-descricao').value=descricao;
+    document.getElementById('feras-editar-quantidade').value=quantidade;
+    document.getElementById('feras-editar-vista').value=vista;
+    document.getElementById('feras-editar-prazo').value=prazo;
+    document.getElementById('feras-editar-id').value=id;
+
+};
+
 function cadastrarProduto(){
 	var xhttp = new XMLHttpRequest();
 	var produto = document.getElementById("feras-cadastro-produto").value;
