@@ -1,7 +1,7 @@
 <?php
 
-include('conecta.php');
-include('executa.php');
+require_once('conecta.php');
+require_once('executa.php');
 
 $senha = mysqli_real_escape_string($conn,md5($_POST['senha']));
 $usuario = mysqli_real_escape_string($conn,$_POST['usuario']);

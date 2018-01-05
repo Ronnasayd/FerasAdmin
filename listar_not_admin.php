@@ -1,6 +1,6 @@
 <?php
-	include('conecta.php');
-	include('executa.php');
+	require_once('conecta.php');
+	require_once('executa.php');
 
 	$query = "SELECT * FROM mercadorias";
 	$result = executaQuery($conn,$query);

@@ -1,20 +1,20 @@
 <?php
 session_start();
 if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
-	include('header.php');
-	include('listar.php');
-	include('footer.php');
+	require_once('header.php');
+	require_once('listar.php');
+	require_once('footer.php');
 }
 else{
-	include('header_not_admin.php');
+	require_once('header_not_admin.php');
 ?>
 <div class="alert alert-danger">
   <strong>Perigo!</strong> Você não tem autorização para acessar essa área.
 </div>
 
 <?php
-	include('listar_not_admin.php');
-	include('footer.php');
+	require_once('listar_not_admin.php');
+	require_once('footer.php');
 }
 ?>
               

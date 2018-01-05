@@ -7,13 +7,13 @@ if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
 ?>
 
 <?php
-include('header_not_admin.php');
+require_once('header_not_admin.php');
 ?>
 
 <?php
-include('listar_not_admin.php');
+require_once('listar_not_admin.php');
 ?>
                  
 <?php
-include('footer_not_admin.php');
+require_once('footer_not_admin.php');
 ?>
