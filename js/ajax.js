@@ -45,6 +45,7 @@ function listaproduto(){
 	xhttp.open("GET","listar.php",true);
 	xhttp.send();
 
+
 };
 
 function cadastrarelistar(){
@@ -80,6 +81,7 @@ function updateProduto(){
     var id = document.getElementById('feras-editar-id').value;
 
     var xhttp = new XMLHttpRequest();
+    
 
     xhttp.open("GET","editarproduto.php?id="+id+"&produto="+produto+"&descricao="+descricao+"&quantidade="+quantidade+"&vista="+vista+"&prazo="+prazo,true);
     xhttp.send();
@@ -88,7 +90,9 @@ function updateProduto(){
 function editarProduto(){
 	updateProduto();
 	listaproduto();
+
 };
+
 
 function validateLogin(){
 

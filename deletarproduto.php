@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+         session_start();
+}
 if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
 	
 	require_once('conecta.php');

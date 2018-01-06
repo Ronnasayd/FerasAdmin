@@ -20,7 +20,7 @@ if($row[0]){
 			$_SESSION['admin']="administrador_logado";
 		
 
-			header('Location: mercadorias.php');
+			header('Location: admin.php');
 			exit;
 }
 else{

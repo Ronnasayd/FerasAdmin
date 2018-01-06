@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+         session_start();
+}
 if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
 require_once('conecta.php');
 require_once('executa.php');
@@ -16,6 +18,7 @@ require_once('executa.php');
 	$result = executaQuery($conn,$query);
 
 	mysqli_close($conn);
+
 }
 else{
 	header('Location: index.php');

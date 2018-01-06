@@ -1,3 +1,33 @@
+<?php
+      if(!isset($_SESSION)){
+         session_start();
+}
+
+if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
+
+$options = "<th>Opções</th>";
+
+$log = "Sair"; 
+
+$admin = "Admin";
+
+$button = "<div class='button-cadastrar'>
+            <a class='nav-link btn btn-primary' data-toggle='modal' data-target='#modalCadastrar' href=''>
+            <!-- <button type='button' class='btn btn-primary'> -->
+            <i class='fa fa-fw fa-plus'></i>
+            Cadastrar Produto
+            </a>
+ </div>";
+}
+
+else{
+   $log = "Entrar";
+   $admin ="";
+   $button = "";
+   $options="";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
@@ -6,7 +36,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <title>Feras PetShop Admin</title>
+      <title>Feras PetShop <?php echo $admin ?></title>
       <!-- Bootstrap core CSS-->
       <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <!-- Custom fonts for this template-->
@@ -22,7 +52,7 @@
    <body class="fixed-nav sticky-footer bg-dark" id="page-top">
       <!-- Navigation-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top feras-bg-main-color" id="mainNav">
-         <a class="navbar-brand" href="#feras-area-de-trabalho">Feras PetShop Admin</a>
+         <a class="navbar-brand" href="#feras-area-de-trabalho">Feras PetShop <?php echo $admin ?></a>
          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
          </button>
@@ -57,7 +87,7 @@
                </li>
                <li class="nav-item">
                   <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                  <i class="fa fa-fw fa-sign-out"></i>Sair</a>
+                  <i class="fa fa-fw fa-sign-out"></i><?php echo $log ?></a>
                </li>
             </ul>
          </div>
@@ -76,14 +106,7 @@
       <div class="card-header">
          <i class="fa fa-database"></i>  
          Mercadorias
-         <div class="button-cadastrar">
-            <a class="nav-link" data-toggle="modal" data-target="#modalCadastrar">
-            <button type="button" class="btn btn-primary">
-            <i class="fa fa-fw fa-plus"></i>
-            Cadastrar Produto
-            </button>
-            </a>
-         </div>
+         <?php echo $button ?>
       </div>
       <div class="card-body">
       <div class="table-responsive">
@@ -95,7 +118,7 @@
             <th>Quantidade</th>
             <th>Valor à Vista</th>
             <th>Valor à Prazo</th>
-            <th>Opções</th>
+            <?php echo $options ?>
          </tr>
       </thead>
       <tbody id="tabela-feras-body">

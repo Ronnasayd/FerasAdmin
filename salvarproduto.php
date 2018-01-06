@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(!isset($_SESSION)){
+         session_start();
+}
 if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
 	require_once('conecta.php');
 	require_once('executa.php');
@@ -16,7 +18,7 @@ if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
 
 	if($result){
 		echo "sucess_save";
-		header('Location: mercadorias.php');
+		header('Location: admin.php');
 		exit;
 	}
 

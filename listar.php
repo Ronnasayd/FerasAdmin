@@ -15,16 +15,19 @@
    ?>
                     <th class='text-center'>
                       <div>
-                        <a data-toggle='modal' data-target='#modalExcluir'>
-                        <button type='button' class='btn btn-danger' onclick="changehideninputid(<?php echo $row['id']?>)">
+
+       
+
+                        <a class="btn btn-danger" data-toggle='modal' data-target='#modalExcluir' onclick="changehideninputid(<?php echo $row['id']?>)" href="">
                         <i class='fa fa-fw fa-close'></i>
-                        </button></a>
+                        </a>
 
 
-                        <a  data-toggle='modal' data-target='#modalEditar'>
-                        <button type='button' class='btn btn-primary' onclick="passToEdit('<?php echo $row['produto']?>','<?php echo $row['descricao']?>',<?php echo $row['quantidade']?>,<?php echo $row['vista']?>,<?php echo $row['prazo']?>,<?php echo $row['id']?>)">
+                        <a  class="btn btn-primary" data-toggle='modal' data-target='#modalEditar' href="" onclick="passToEdit('<?php echo $row['produto']?>','<?php echo $row['descricao']?>',<?php echo $row['quantidade']?>,<?php echo $row['vista']?>,<?php echo $row['prazo']?>,<?php echo $row['id']?>)">
                         <i class='fa fa-fw fa-edit'></i>
-                        </button></a>
+                        </a>
+
+
                       </div>
                     </th>
                   </tr>
@@ -34,3 +37,4 @@
 	}
 	mysqli_close($conn);
 ?>
+
