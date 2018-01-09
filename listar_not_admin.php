@@ -7,11 +7,11 @@
 
 	while($row = mysqli_fetch_assoc($result)){
 				echo "<tr>
-                    <th>".$row['produto']."</th>
-                    <th>".$row['descricao']."</th>
-                    <th>".$row['quantidade']."</th>
-                    <th>".$row['vista']."</th>
-                    <th>".$row['prazo']."</th></tr>";
+                    <td>".$row['produto']."</td>
+                    <td>".$row['descricao']."</td>
+                    <td>".$row['quantidade']."</td>
+                    <td>".$row['vista']."</td>
+                    <td>".$row['prazo']."</td></tr>";
 	}
 	mysqli_close($conn);
 ?>

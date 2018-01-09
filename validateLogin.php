@@ -20,8 +20,7 @@ if($row[0]){
 			$_SESSION['admin']="administrador_logado";
 		
 
-			header('Location: admin.php');
-			exit;
+			echo "success_login";
 }
 else{
 			echo mysqli_error($conn);

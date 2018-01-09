@@ -21,7 +21,7 @@
             <input class="form-control" id="feras-validate-login-senha" type="Password" placeholder="senha" name="senha">
           </div>
     
-          <button class="btn btn-primary btn-block" id="feras-button-validate-id" type="button" onclick="validateLogin()">Entrar</button>
+          <button class="btn btn-primary btn-block" id="feras-button-validate-id" type="button">Entrar</button>
         </form>
          </div>
          <div class="modal-footer">

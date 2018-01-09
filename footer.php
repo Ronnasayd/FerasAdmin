@@ -51,9 +51,9 @@ else{
 <!-- Custom scripts for all pages-->
 <script src="js/sb-admin.min.js"></script>
 <!-- Custom scripts for this page-->
-<script src="js/sb-admin-datatables.js"></script>
+<script src="js/jquery-feras.js"></script>
 
-<script type="text/javascript" src="js/ajax.js"></script>
+<!-- <script type="text/javascript" src="js/ajax.js"></script> -->
 </div>
 </body>
 </html>

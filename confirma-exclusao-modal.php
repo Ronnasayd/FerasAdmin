@@ -15,7 +15,7 @@
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Não</button>
             <form>
                <input type="hidden" name="id" id="feras-input-deletar" value="">
-               <button class="btn btn-primary" type="button" onclick="deletarproduto()" data-dismiss="modal">Sim</button>
+               <button class="btn btn-primary" type="button" data-dismiss="modal" id="feras-confirma-delete">Sim</button>
             </form>
          </div>
       </div>

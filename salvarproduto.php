@@ -17,14 +17,16 @@ if(isset($_SESSION['admin']) or !empty($_SESSION['admin'])){
 	$result = executaQuery($conn,$query);
 
 	if($result){
-		echo "sucess_save";
-		header('Location: admin.php');
-		exit;
+		echo "success_save";
+	}
+	else{
+		echo mysqli_error($conn);
 	}
 
-	mysqli_close($conn);
-}
+}	
 else{
 	header('Location: index.php');
 	exit;
 }
+
+mysqli_close($conn);

@@ -40,7 +40,7 @@
          </div>
          <div class="modal-footer">
          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-         <button type="submit" class="btn btn-primary" onclick="editarProduto()" data-dismiss="modal">Salvar</button>
+         <button type="submit" class="btn btn-primary" data-dismiss="modal" id="feras-editar-modal-salvar" >Salvar</button>
          </div>
          </form>
       </div>

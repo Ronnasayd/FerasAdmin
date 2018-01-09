@@ -4,7 +4,7 @@
 		$result = mysqli_query($conexao,$query);
 
 		if(!$result){
-			echo mysqli_error($conn);
+			echo mysqli_error($conexao);
 		}
 
 		return $result;
